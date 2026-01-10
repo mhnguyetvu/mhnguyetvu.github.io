@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio | Nguyet Nguyen Vu Minh</title>
+    <meta name="description"
+        content="Academic Portfolio of Nguyet Nguyen Vu Minh - Researcher in NLP and Computer Vision.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <div class="logo">M.NGUYET.</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#education">Education</a>
+            <a href="#interests">Interests</a>
+            <a href="#projects">Research</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="reveal">Nguyet Nguyen Vu Minh</h1>
+            <p class="reveal" style="font-size: 1.5rem; color: var(--accent); font-weight: 600; margin-bottom: 1rem;">AI
+                Researcher | NLP & Computer Vision</p>
+            <p class="reveal">Passionate about Continual Learning, Neural Machine Translation, and bridging the gap
+                between vision and language. Contributor to ACL 2023 research.</p>
+            <div class="cta-buttons reveal">
+                <a href="#" class="btn btn-primary"><i class="fas fa-file-download"></i> View Curriculum Vitae</a>
+                <a href="#projects" class="btn btn-outline">Explore Research</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="reveal">
+        <h2 class="section-title">Academic Background</h2>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-content glass">
+                    <div class="timeline-date">2020 - Present</div>
+                    <h3>Bachelor of Computer Science</h3>
+                    <p style="color: var(--accent); font-weight: 500;">Ho Chi Minh City University of Technology (HCMUT)
+                    </p>
+                    <p>Focusing on AI, Deep Learning, and Advanced Mathematics. Active member of AI research labs.</p>
+                </div>
+            </div>
+            <!-- Add more if specific high school info is known, otherwise keep it clean -->
+        </div>
+    </section>
+
+    <section id="interests" class="reveal">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="interests-grid reveal">
+            <div class="interest-badge">Continual Learning</div>
+            <div class="interest-badge">Neural Machine Translation</div>
+            <div class="interest-badge">Few-Shot Event Detection</div>
+            <div class="interest-badge">Vision-Language Models</div>
+            <div class="interest-badge">Natural Language Processing</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title reveal">Key Research & Projects</h2>
+
+        <div class="research-card glass reveal">
+            <div class="project-info">
+                <div class="tag-container">
+                    <span class="tag publication">Publication</span>
+                    <span class="tag publication">ACL 2023</span>
+                    <span class="tag">PyTorch Lightning</span>
+                </div>
+                <h3>HANet: Hierarchical Augmentation for Continual Few-shot Event Detection</h3>
+                <p class="abstract">A PyTorch Lightning implementation focusing on event detection using the MAVEN
+                    dataset. This research explores hierarchical augmentation techniques to mitigate catastrophic
+                    forgetting in few-shot scenarios.</p>
+                <div class="project-links">
+                    <a href="https://github.com/mhnguyetvu/HANet" target="_blank"><i class="fab fa-github"></i>
+                        Repository</a>
+                    <a href="https://aclanthology.org/" target="_blank"><i class="fas fa-book"></i> ACL Anthology</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-card glass reveal">
+            <div class="project-info">
+                <div class="tag-container">
+                    <span class="tag">NLP</span>
+                    <span class="tag">mBART50</span>
+                    <span class="tag">Translation</span>
+                </div>
+                <h3>English-Vietnamese Translation with mBART50</h3>
+                <p class="abstract">Fine-tuning the mBART50 model for high-quality English to Vietnamese neural machine
+                    translation, focusing on linguistic nuances and domain-specific vocabulary.</p>
+                <div class="project-links">
+                    <a href="https://github.com/mhnguyetvu/en-vi-mbart50" target="_blank"><i class="fab fa-github"></i>
+                        Repository</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-card glass reveal">
+            <div class="project-info">
+                <div class="tag-container">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Sign Language</span>
+                </div>
+                <h3>Vietnam Sign Language (VSL) Recognition</h3>
+                <p class="abstract">Developing robust models for recognizing and interpreting Vietnamese Sign Language
+                    (VSL) using deep learning techniques to improve accessibility.</p>
+                <div class="project-links">
+                    <a href="https://github.com/mhnguyetvu/sign-language-vsl" target="_blank"><i
+                            class="fab fa-github"></i> Repository</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="research-card glass reveal">
+            <div class="project-info">
+                <div class="tag-container">
+                    <span class="tag">NLP</span>
+                    <span class="tag">NLLB-200</span>
+                    <span class="tag">Distillation</span>
+                </div>
+                <h3>NLLB-200 Model Distillation & Fine-tuning</h3>
+                <p class="abstract">Research on compressing and fine-tuning Meta's NLLB-200 (No Language Left Behind)
+                    model to maintain performance on low-resource languages while reducing computational overhead.</p>
+                <div class="project-links">
+                    <a href="https://github.com/mhnguyetvu/nllb-distilled-200-finetuning" target="_blank"><i
+                            class="fab fa-github"></i> Repository</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title reveal">Get in Touch</h2>
+        <div class="glass reveal contact-container" style="padding: 3rem; text-align: center;">
+            <p style="margin-bottom: 2rem;">I am always open to discussing research collaborations or graduate school
+                opportunities.</p>
+            <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-bottom: 2rem;">
+                <p><i class="fab fa-linkedin" style="color: var(--primary);"></i> linkedin.com/in/mhnguyetvu
+                    (Placeholder)</p>
+                <p><i class="fab fa-github" style="color: var(--primary);"></i> github.com/mhnguyetvu</p>
+                <p><i class="fas fa-envelope" style="color: var(--primary);"></i> [Your Email]@hcmut.edu.vn</p>
+            </div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name / Institution" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Contact Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" placeholder="Message or Inquiry" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer
+        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2026 Nguyet Nguyen Vu Minh. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
