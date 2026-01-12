@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | HANet - ACL 2023</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: none;"> <!-- Keep dark bg but cleaner for body text -->
+
+    <nav id="navbar" class="scrolled"> <!-- Force scrolled state for better readability -->
+        <div class="logo">M.NGUYET.</div>
+        <div class="nav-links">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <section style="padding-top: 10rem;">
+        <div class="reveal active">
+            <div class="tag-container" style="margin-bottom: 1rem;">
+                <span class="tag publication">Publication</span>
+                <span class="tag publication">ACL 2023</span>
+                <span class="tag">Continual Learning</span>
+            </div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">HANet: Hierarchical Augmentation for
+                Continual Few-shot Event Detection</h1>
+
+            <div class="glass" style="padding: 3rem; margin-bottom: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Abstract</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
+                    Continual few-shot event detection (CFSED) aims to learn new event types from a few examples while
+                    maintaining performance on previously learned types. This is challenging due to the severe
+                    "catastrophic forgetting" problem in few-shot scenarios.
+                    <br><br>
+                    <strong>HANet</strong> proposes a Hierarchical Augmentation framework that leverages both data-level
+                    and feature-level augmentation to enhance the model's robustness and memory. By applying
+                    hierarchical strategies, we can effectively bridge the gap between base classes and novel few-shot
+                    tasks.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Key Contributions</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
+                        <li style="margin-bottom: 1rem;">Introduced <strong>Hierarchical Augmentation</strong> to
+                            improve feature diversity in low-resource settings.</li>
+                        <li style="margin-bottom: 1rem;">Mitigated catastrophic forgetting using a balanced memory
+                            replay strategy.</li>
+                        <li style="margin-bottom: 1rem;">Achieved state-of-the-art results on the <strong>MAVEN</strong>
+                            dataset for continual event detection.</li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Technologies Used</h3>
+                    <div class="tag-container" style="margin-top: 1rem;">
+                        <span class="tag">PyTorch Lightning</span>
+                        <span class="tag">Transformer</span>
+                        <span class="tag">MSR-VTT</span>
+                        <span class="tag">MAVEN Dataset</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://github.com/mhnguyetvu/HANet" class="btn btn-primary" target="_blank"><i
+                                class="fab fa-github"></i> View GitHub Repository</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h2 style="text-align: center; margin-bottom: 3rem;">Methodology Overview</h2>
+                <div class="glass" style="padding: 3rem; text-align: center;">
+                    <p style="color: var(--text-muted);">[Methodology Diagram Placeholder - Suggest adding an image
+                        here]</p>
+                    <p style="margin-top: 1.5rem;">
+                        Our approach uses a hierarchical network architecture where low-level features are shared across
+                        tasks, while high-level task-specific layers are augmented to capture the unique nuances of new
+                        event types without overwriting existing knowledge.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2026 Nguyet Nguyen Vu Minh. Academic Portfolio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

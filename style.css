@@ -383,6 +383,23 @@ textarea:focus {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-main);
+    transition: var(--transition);
+}
+
+.project-title-link:hover {
+    color: var(--primary);
+    transform: translateX(10px);
+    cursor: pointer;
+}
+
+.project-title-link::after {
+    content: ' →';
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.project-title-link:hover::after {
+    opacity: 1;
 }
 
 .project-info .abstract {
