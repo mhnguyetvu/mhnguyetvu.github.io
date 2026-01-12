@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | NLLB-200 Fine-tuning</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: none;">
+
+    <nav id="navbar" class="scrolled">
+        <div class="logo">M.NGUYET.</div>
+        <div class="nav-links">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <section style="padding-top: 10rem;">
+        <div class="reveal active">
+            <div class="tag-container" style="margin-bottom: 1rem;">
+                <span class="tag">NLP</span>
+                <span class="tag">NLLB-200</span>
+                <span class="tag">Knowledge Distillation</span>
+            </div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">NLLB-200 Model Distillation &
+                Fine-tuning</h1>
+
+            <div class="glass" style="padding: 3rem; margin-bottom: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">The Research</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
+                    Meta's NLLB-200 (No Language Left Behind) is a revolutionary model capable of translating 200
+                    different languages. However, its massive size makes it difficult to deploy on standard hardware.
+                    <br><br>
+                    This project investigates <strong>Knowledge Distillation</strong> techniques to create smaller,
+                    faster versions of the model while maintaining its superior translation quality for low-resource
+                    languages.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Methodology</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
+                        <li style="margin-bottom: 1rem;">Applied parameter-efficient fine-tuning (PEFT) like LoRA.</li>
+                        <li style="margin-bottom: 1rem;">Comparison between original NLLB-200 and distilled versions.
+                        </li>
+                        <li style="margin-bottom: 1rem;">Targeted improvement for specific linguistic clusters.</li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Outcomes</h3>
+                    <div style="color: var(--text-muted);">
+                        <p>Successful reduction in model size with minimal loss in BLEU score, enabling deployment in
+                            resource-constrained environments.</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://github.com/mhnguyetvu/nllb-distilled-200-finetuning" class="btn btn-primary"
+                            target="_blank"><i class="fab fa-github"></i> View GitHub Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2026 Nguyet Nguyen Vu Minh. Academic Portfolio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

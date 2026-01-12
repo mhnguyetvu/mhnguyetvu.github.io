@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Vietnam Sign Language Recognition</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: none;">
+
+    <nav id="navbar" class="scrolled">
+        <div class="logo">M.NGUYET.</div>
+        <div class="nav-links">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <section style="padding-top: 10rem;">
+        <div class="reveal active">
+            <div class="tag-container" style="margin-bottom: 1rem;">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Sign Language</span>
+                <span class="tag">Deep Learning</span>
+            </div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">Vietnam Sign Language (VSL) Recognition
+            </h1>
+
+            <div class="glass" style="padding: 3rem; margin-bottom: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">The Challenge</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
+                    Recognizing Vietnamese Sign Language (VSL) is a crucial step towards building inclusive technology
+                    for the deaf and hard-of-hearing community in Vietnam. Unlike mainstream languages, VSL has unique
+                    spatial and temporal patterns that require specialized Computer Vision techniques.
+                    <br><br>
+                    This project explores real-time gesture recognition to translate signs into text, easing
+                    communication barriers.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Technical Approach</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
+                        <li style="margin-bottom: 1rem;">Utilized <strong>MediaPipe</strong> for hand landmark detection
+                            to reduce background noise.</li>
+                        <li style="margin-bottom: 1rem;">Implemented 3D CNNs and LSTMs to capture the temporal movement
+                            of signs.</li>
+                        <li style="margin-bottom: 1rem;">Curated a specialized dataset of VSL gestures for training.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Future Work</h3>
+                    <div style="color: var(--text-muted);">
+                        <p>Planning to expand the vocabulary and integrate the model into a mobile application for
+                            real-world usage.</p>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://github.com/mhnguyetvu/sign-language-vsl" class="btn btn-primary"
+                            target="_blank"><i class="fab fa-github"></i> View GitHub Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2026 Nguyet Nguyen Vu Minh. Academic Portfolio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | en-vi-mbart50</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: none;">
+
+    <nav id="navbar" class="scrolled">
+        <div class="logo">M.NGUYET.</div>
+        <div class="nav-links">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <section style="padding-top: 10rem;">
+        <div class="reveal active">
+            <div class="tag-container" style="margin-bottom: 1rem;">
+                <span class="tag">NLP</span>
+                <span class="tag">mBART50</span>
+                <span class="tag">Translation</span>
+            </div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">English-Vietnamese Translation with
+                mBART50</h1>
+
+            <div class="glass" style="padding: 3rem; margin-bottom: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Overview</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
+                    This project focuses on fine-tuning the <strong>mBART50</strong> model for the English-to-Vietnamese
+                    translation task. mBART50 is a many-to-many multilingual sequence-to-sequence model pre-trained on a
+                    large-scale corpus of 50 languages.
+                    <br><br>
+                    Our goal is to optimize the model for better fluency and accuracy in Vietnamese translations,
+                    especially in technical and formal domains.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Objectives</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
+                        <li style="margin-bottom: 1rem;">Adapt the pre-trained mBART50 model for the En-Vi language
+                            pair.</li>
+                        <li style="margin-bottom: 1rem;">Utilize techniques like teacher forcing and label smoothing to
+                            improve convergence.</li>
+                        <li style="margin-bottom: 1rem;">Evaluate performance using BLEU and TER scores across multiple
+                            test sets.</li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3>Technologies</h3>
+                    <div class="tag-container" style="margin-top: 1rem;">
+                        <span class="tag">Hugging Face Transformers</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">mBART50-large-50</span>
+                        <span class="tag">Tokenization</span>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://github.com/mhnguyetvu/en-vi-mbart50" class="btn btn-primary" target="_blank"><i
+                                class="fab fa-github"></i> View GitHub Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2026 Nguyet Nguyen Vu Minh. Academic Portfolio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
