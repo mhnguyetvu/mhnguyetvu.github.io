@@ -329,10 +329,10 @@ textarea:focus {
     color: var(--primary);
 }
 
-.tag.publication {
-    background: rgba(244, 63, 94, 0.15);
-    border-color: rgba(244, 63, 94, 0.4);
-    color: #fb7185;
+.tag.featured {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.4);
+    color: #818cf8;
     font-weight: 700;
 }
 

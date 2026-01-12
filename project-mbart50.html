@@ -31,26 +31,24 @@
             <div class="tag-container" style="margin-bottom: 1rem;">
                 <span class="tag">NLP</span>
                 <span class="tag">mBART50</span>
-                <span class="tag">Translation</span>
+                <span class="tag">Deep Learning</span>
             </div>
             <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">English-Vietnamese Translation with
                 mBART50</h1>
 
             <div class="glass" style="padding: 3rem; margin-bottom: 3rem;">
-                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Overview</h2>
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">1. Motivation & Challenge</h2>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
-                    This project focuses on fine-tuning the <strong>mBART50</strong> model for the English-to-Vietnamese
-                    translation task. mBART50 is a many-to-many multilingual sequence-to-sequence model pre-trained on a
-                    large-scale corpus of 50 languages.
-                    <br><br>
-                    Our goal is to optimize the model for better fluency and accuracy in Vietnamese translations,
-                    especially in technical and formal domains.
+                    While multilingual models like mBART50 offer great potential, their performance on zero-shot or
+                    few-shot translation into Vietnamese often lacks the fluency and domain specificity required for
+                    professional use. My goal with this project was to explore how fine-tuning on a curated En-Vi corpus
+                    could improve the <strong>BLEU score</strong> and semantic alignment, particularly in formal text
+                    structures.
                 </p>
             </div>
 
             <div class="projects-grid">
                 <div class="glass" style="padding: 2rem;">
-                    <h3>Objectives</h3>
                     <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
                         <li style="margin-bottom: 1rem;">Adapt the pre-trained mBART50 model for the En-Vi language
                             pair.</li>
