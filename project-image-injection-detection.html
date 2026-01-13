@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Image Injection Detection API</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: none;">
+
+    <nav id="navbar" class="scrolled">
+        <div class="logo">MINH NGUYET</div>
+        <div class="nav-links">
+            <a href="index.html">← Back to Portfolio</a>
+        </div>
+    </nav>
+
+    <section style="padding-top: 10rem;">
+        <div class="reveal active">
+            <div class="tag-container" style="margin-bottom: 1rem;">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Fraud Detection</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Internal Project</span>
+            </div>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">Facial ID Fraud Detection API<br/>
+                <span style="font-size: 2rem; color: var(--text-muted);">Image Injection Detection System</span>
+            </h1>
+
+            <div class="glass" style="padding: 3rem; margin-bottom: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">The Challenge</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
+                    In the era of digital finance, facial biometric fraud represents a critical security challenge. 
+                    Fraudsters use sophisticated image injection techniques to bypass facial recognition systems, 
+                    potentially compromising millions of transactions.
+                    <br><br>
+                    This research project develops a real-time API service that validates transactions using advanced 
+                    facial biometrics analysis combined with metadata signals, velocity checks, and dynamic blocklisting 
+                    to detect and prevent image injection attacks with microsecond-level response times.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="glass" style="padding: 2rem;">
+                    <h3><i class="fas fa-cogs" style="color: var(--primary); margin-right: 0.5rem;"></i>Technical Architecture</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>FastAPI Backend:</strong> High-performance REST API with async processing capabilities 
+                            for real-time fraud detection
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Redis Feature Store:</strong> In-memory caching with TTL management for suspicious IPs, 
+                            UIDs, and device fingerprints, ensuring sub-millisecond query times
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Multi-Layer Decision Engine:</strong> Implemented 3-rule hierarchical detection system:
+                            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li>Historical violation tracking with real-time cache synchronization</li>
+                                <li>Blacklist + device model pattern matching</li>
+                                <li>Velocity-based detection (threshold: 3 attempts/24h) with automatic flagging</li>
+                            </ul>
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Computer Vision Integration:</strong> Checksum validation and image metadata analysis 
+                            to detect tampered or injected facial images
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Automated Defense:</strong> Dynamic blocklisting with configurable TTL (48-72 hours) 
+                            and daily detection limits to prevent false positives
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3><i class="fas fa-chart-line" style="color: var(--primary); margin-right: 0.5rem;"></i>Key Features & Impact</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Real-time Processing:</strong> Average response time under 50ms with concurrent request handling
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Scalable Architecture:</strong> Docker containerization with horizontal scaling capabilities
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Comprehensive Monitoring:</strong> Centralized logging system with rotating files and 
+                            real-time cache status endpoints
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Load Testing Framework:</strong> Built-in Locust performance testing suite for 
+                            realistic data-driven stress tests
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Production-Ready:</strong> White-list support, daily limit controls, and graceful error handling
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3><i class="fas fa-brain" style="color: var(--primary); margin-right: 0.5rem;"></i>Research Methodology</h3>
+                    <p style="color: var(--text-muted); line-height: 1.7;">
+                        The system employs a hybrid approach combining traditional rule-based detection with machine learning insights:
+                    </p>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Feature Engineering:</strong> Extracted and analyzed metadata signals including IP geolocation, 
+                            device fingerprinting (IMEI, model), and image properties (checksum, size)
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Pattern Recognition:</strong> Identified correlation between suspicious device models 
+                            and fraud patterns through historical data analysis
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Velocity Analysis:</strong> Implemented time-window based anomaly detection to flag 
+                            unusual transaction frequencies
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong>Adaptive Learning:</strong> Real-time cache updates based on detected violations, 
+                            creating a self-improving defense mechanism
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3><i class="fas fa-rocket" style="color: var(--primary); margin-right: 0.5rem;"></i>Technical Stack</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                            <strong style="color: var(--primary);">Backend</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Python 3.8+, FastAPI, Pydantic, Uvicorn
+                            </p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                            <strong style="color: var(--primary);">Data Layer</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Redis, PostgreSQL, Trino
+                            </p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                            <strong style="color: var(--primary);">DevOps</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Docker, Git, Locust
+                            </p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px;">
+                            <strong style="color: var(--primary);">Testing</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+                                Load Testing, Unit Tests, API Integration Tests
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <h3><i class="fas fa-lightbulb" style="color: var(--primary); margin-right: 0.5rem;"></i>Future Research Directions</h3>
+                    <div style="color: var(--text-muted);">
+                        <p style="margin-bottom: 1rem;">
+                            This project opens several promising research avenues for advanced fraud detection:
+                        </p>
+                        <ul style="padding-left: 1.2rem;">
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Deep Learning Integration:</strong> Exploring CNN/ResNet architectures for 
+                                automated feature extraction from facial images
+                            </li>
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Liveness Detection:</strong> Implementing challenge-response mechanisms to 
+                                detect presentation attacks
+                            </li>
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Ensemble Models:</strong> Combining multiple detection algorithms for improved 
+                                accuracy and robustness
+                            </li>
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Real-time ML:</strong> Developing online learning capabilities to adapt to 
+                                evolving fraud patterns without retraining
+                            </li>
+                            <li style="margin-bottom: 0.8rem;">
+                                <strong>Cross-Platform Analysis:</strong> Expanding detection capabilities across 
+                                mobile, web, and IoT platforms
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="SYSTEM_FLOW_DIAGRAMS.md" class="btn btn-primary"
+                            target="_blank"><i class="fas fa-diagram-project"></i> System Architecture Documentation</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Metrics Section -->
+            <div class="glass" style="padding: 3rem; margin-top: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 2rem; text-align: center;">
+                    <i class="fas fa-chart-bar"></i> System Performance Metrics
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">&lt;50ms</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">Average Response Time</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">3-Rule</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">Detection Engine</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">Redis</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">In-Memory Cache</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: var(--primary);">72h</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">Real-time Cache TTL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        <p>&copy; 2026 Nguyet Nguyen Vu Minh. Academic Portfolio.</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            <i class="fas fa-university"></i> Research Project in Computer Vision & Fraud Detection
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
