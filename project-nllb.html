@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details | NLLB-200 Fine-tuning</title>
+    <title>Project Details | NLLB-200 Korean-Vietnamese Fine-tuning</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,52 +30,204 @@
         <div class="reveal active">
             <div class="tag-container" style="margin-bottom: 1rem;">
                 <span class="tag">NLP</span>
+                <span class="tag">Machine Translation</span>
                 <span class="tag">NLLB-200</span>
-                <span class="tag">Knowledge Distillation</span>
+                <span class="tag">Fine-tuning</span>
+                <span class="tag">Korean-Vietnamese</span>
             </div>
-            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">NLLB-200 Model Distillation &
-                Fine-tuning</h1>
+            <h1 style="font-size: 3rem; line-height: 1.2; margin-bottom: 2rem;">NLLB-200 Fine-tuning for Korean-Vietnamese Translation</h1>
 
             <div class="glass" style="padding: 3rem; margin-bottom: 3rem;">
-                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">The Research</h2>
+                <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Project Overview</h2>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted);">
-                    Meta's NLLB-200 (No Language Left Behind) is a revolutionary model capable of translating 200
-                    different languages. However, its massive size makes it difficult to deploy on standard hardware.
+                    This project implements a comprehensive pipeline for fine-tuning Facebook's NLLB-200-distilled-600M model on Korean-Vietnamese parallel data, 
+                    achieving <strong>+20% BLEU improvement</strong> over the baseline through advanced quality filtering and semantic alignment techniques.
                     <br><br>
-                    This project investigates <strong>Knowledge Distillation</strong> techniques to create smaller,
-                    faster versions of the model while maintaining its superior translation quality for low-resource
-                    languages.
+                    The key innovation lies in the <strong>multi-stage filtering pipeline</strong> combined with <strong>automated threshold optimization</strong>, 
+                    demonstrating that quality significantly outweighs quantity in neural machine translation training data.
                 </p>
             </div>
 
+            <!-- Key Results Section -->
+            <div class="glass" style="padding: 3rem; margin-bottom: 3rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);">
+                <h2 style="color: var(--primary); margin-bottom: 2rem; text-align: center;">Key Results</h2>
+                <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary);">23.85</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">BLEU Score</div>
+                        <div style="color: #10b981; font-size: 0.9rem; margin-top: 0.25rem;">+20% vs baseline</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary);">0.869</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">COMET</div>
+                        <div style="color: #10b981; font-size: 0.9rem; margin-top: 0.25rem;">+4.7% improvement</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary);">27K</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">High-Quality Pairs</div>
+                        <div style="color: var(--accent); font-size: 0.9rem; margin-top: 0.25rem;">Threshold 0.80</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary);">44.91</div>
+                        <div style="color: var(--text-muted); margin-top: 0.5rem;">chrF Score</div>
+                        <div style="color: #10b981; font-size: 0.9rem; margin-top: 0.25rem;">+10.9% improvement</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Approach -->
             <div class="projects-grid">
                 <div class="glass" style="padding: 2rem;">
-                    <h3>Methodology</h3>
-                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem;">
-                        <li style="margin-bottom: 1rem;">Applied parameter-efficient fine-tuning (PEFT) like LoRA.</li>
-                        <li style="margin-bottom: 1rem;">Comparison between original NLLB-200 and distilled versions.
-                        </li>
-                        <li style="margin-bottom: 1rem;">Targeted improvement for specific linguistic clusters.</li>
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--primary);">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Multi-Stage Filtering</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem; line-height: 1.8;">
+                        <li style="margin-bottom: 0.8rem;"><strong>Basic Filtering:</strong> Length, ratio, special characters removal</li>
+                        <li style="margin-bottom: 0.8rem;"><strong>Enhanced Filtering:</strong> Language ID verification (80% confidence), near-duplicate detection (MinHash LSH), boilerplate removal</li>
+                        <li style="margin-bottom: 0.8rem;"><strong>Semantic Alignment:</strong> LaBSE embeddings for cross-lingual similarity scoring</li>
                     </ul>
                 </div>
 
                 <div class="glass" style="padding: 2rem;">
-                    <h3>Outcomes</h3>
-                    <div style="color: var(--text-muted);">
-                        <p>Successful reduction in model size with minimal loss in BLEU score, enabling deployment in
-                            resource-constrained environments.</p>
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--primary);">
+                        <i class="fas fa-sliders-h"></i>
                     </div>
-                    <div style="margin-top: 2rem;">
-                        <a href="https://github.com/mhnguyetvu/nllb-distilled-200-finetuning" class="btn btn-primary"
-                            target="_blank"><i class="fab fa-github"></i> View GitHub Repository</a>
+                    <h3 style="margin-bottom: 1rem;">Threshold Optimization</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem; line-height: 1.8;">
+                        <li style="margin-bottom: 0.8rem;">Automated sweep across multiple similarity thresholds (0.65, 0.70, 0.75, 0.80)</li>
+                        <li style="margin-bottom: 0.8rem;">Quick training (5K steps) for rapid comparison</li>
+                        <li style="margin-bottom: 0.8rem;">Comprehensive evaluation: BLEU, chrF, TER, COMET metrics</li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--primary);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Training Pipeline</h3>
+                    <ul style="margin-top: 1rem; color: var(--text-muted); padding-left: 1.2rem; line-height: 1.8;">
+                        <li style="margin-bottom: 0.8rem;">Automated train/dev/test splitting (95/2.5/2.5)</li>
+                        <li style="margin-bottom: 0.8rem;">Production training with gradient checkpointing and fused optimizer</li>
+                        <li style="margin-bottom: 0.8rem;">Best checkpoint selection based on validation metrics</li>
+                    </ul>
+                </div>
+
+                <div class="glass" style="padding: 2rem;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem; color: var(--primary);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Key Finding</h3>
+                    <div style="color: var(--text-muted); line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;"><strong style="color: var(--primary);">Quality > Quantity:</strong></p>
+                        <p>27K high-quality pairs (threshold 0.80) outperformed 59K medium-quality pairs (threshold 0.65) by +20% BLEU, 
+                        validating the importance of semantic alignment in translation data.</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Threshold Comparison Table -->
+            <div class="glass" style="padding: 3rem; margin-top: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 2rem; text-align: center;">Threshold Comparison Results</h2>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; color: var(--text-muted);">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--glass-border);">
+                                <th style="padding: 1rem; text-align: left;">Threshold</th>
+                                <th style="padding: 1rem; text-align: center;">Data Size</th>
+                                <th style="padding: 1rem; text-align: center;">BLEU</th>
+                                <th style="padding: 1rem; text-align: center;">chrF</th>
+                                <th style="padding: 1rem; text-align: center;">TER</th>
+                                <th style="padding: 1rem; text-align: center;">COMET</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--glass-border);">
+                                <td style="padding: 1rem;">0.65 (baseline)</td>
+                                <td style="padding: 1rem; text-align: center;">59K</td>
+                                <td style="padding: 1rem; text-align: center;">19.89</td>
+                                <td style="padding: 1rem; text-align: center;">40.46</td>
+                                <td style="padding: 1rem; text-align: center;">71.63</td>
+                                <td style="padding: 1rem; text-align: center;">0.830</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid var(--glass-border);">
+                                <td style="padding: 1rem;">0.75</td>
+                                <td style="padding: 1rem; text-align: center;">36K</td>
+                                <td style="padding: 1rem; text-align: center;">22.91</td>
+                                <td style="padding: 1rem; text-align: center;">43.53</td>
+                                <td style="padding: 1rem; text-align: center;">66.14</td>
+                                <td style="padding: 1rem; text-align: center;">0.860</td>
+                            </tr>
+                            <tr style="background: rgba(99, 102, 241, 0.1); border-bottom: 1px solid var(--glass-border); font-weight: 600;">
+                                <td style="padding: 1rem; color: var(--primary);">0.80 (winner) ✓</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary);">27K</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary);">23.85</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary);">44.91</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary);">64.67</td>
+                                <td style="padding: 1rem; text-align: center; color: var(--primary);">0.869</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+                    <em>Quick sweep training with 5K steps per threshold. Winner selected for full 10-epoch production training.</em>
+                </p>
+            </div>
+
+            <!-- Technology Stack -->
+            <div class="glass" style="padding: 3rem; margin-top: 3rem;">
+                <h2 style="color: var(--primary); margin-bottom: 2rem;">Technology Stack</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fas fa-robot"></i> NLLB-200-distilled-600M
+                    </span>
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fab fa-python"></i> Python 3.10
+                    </span>
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fas fa-brain"></i> HuggingFace Transformers
+                    </span>
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fas fa-fire"></i> PyTorch
+                    </span>
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fas fa-layer-group"></i> Sentence-Transformers
+                    </span>
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fas fa-microchip"></i> CUDA (A100 GPU)
+                    </span>
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fas fa-chart-bar"></i> SacreBLEU, COMET
+                    </span>
+                    <span class="tag" style="font-size: 1rem; padding: 0.75rem 1.5rem;">
+                        <i class="fas fa-database"></i> OPUS Corpus
+                    </span>
+                </div>
+            </div>
+
+            <!-- Links and Resources -->
+            <div class="glass" style="padding: 3rem; margin-top: 3rem; text-align: center;">
+                <h2 style="color: var(--primary); margin-bottom: 2rem;">Resources & Links</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+                    <a href="https://github.com/mhnguyetvu/nllb-distilled-200-finetuning" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> View GitHub Repository
+                    </a>
+                    <a href="https://github.com/mhnguyetvu/nllb-distilled-200-finetuning/blob/main/README.md" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-book"></i> Technical Documentation
+                    </a>
+                    <a href="https://huggingface.co/facebook/nllb-200-distilled-600M" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-robot"></i> NLLB-200 Model
+                    </a>
+                </div>
+                <p style="margin-top: 2rem; color: var(--text-muted);">
+                    <i class="fas fa-info-circle"></i> Complete pipeline including data filtering, threshold optimization, training scripts, and evaluation tools.
+                </p>
             </div>
         </div>
     </section>
 
     <footer
-        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border);">
+        style="text-align: center; padding: 4rem 10%; color: var(--text-muted); border-top: 1px solid var(--glass-border); margin-top: 5rem;">
         <p>&copy; 2026 Nguyet Nguyen Vu Minh. Academic Portfolio.</p>
     </footer>
 
